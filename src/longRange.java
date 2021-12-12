@@ -204,7 +204,7 @@ public class longRange extends character
 		
 	}
 	//*******************************************************************************************
-	public void normalwizard(fight battlefield,boolean qi,int loc,shortRange knight,shortRange assassin,longRange master,longRange archer,support priest)
+	public void normalwizard(fight battlefield,boolean qi,int loc,Knight knight,shortRange assassin,longRange master,longRange archer,support priest)
 	{
 		System.out.println("術士使用蝕魂");
 		int number = 0;

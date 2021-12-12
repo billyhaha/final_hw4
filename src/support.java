@@ -5,7 +5,7 @@ public class support extends character
 		super(health,mana,time,_team);
 	}
 	//***********************************************************************************************
-	public void normalpriest(fight battlefield,int target,shortRange knight,shortRange assassin,longRange master,longRange archer,support priest)
+	public void normalpriest(fight battlefield,int target,Knight knight,shortRange assassin,longRange master,longRange archer,support priest)
 	{
 		priest.mp = priest.mp-10;
 		switch(battlefield.field[target])
@@ -122,7 +122,7 @@ public class support extends character
 		}
 		
 	}//方法結束
-	public void specialpriest(fight battlefield,shortRange knight,shortRange assassin,longRange master,longRange archer,support priest)
+	public void specialpriest(fight battlefield,Knight knight,shortRange assassin,longRange master,longRange archer,support priest)
 	{
 		for(int a=0;a<5;a++)//從位置0檢查到位置5
 		{

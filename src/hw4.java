@@ -20,7 +20,7 @@ public class hw4
 			
 			
 			
-			shortRange knight = new shortRange(100,40,1,1);
+			Knight knight = new Knight(100,40,1,1);
 			shortRange assassin = new shortRange(80,50,1,1);
 			shortRange barbarian = new shortRange(120,0,1,-1);
 			longRange master = new longRange(50,100,1,1);
@@ -96,7 +96,7 @@ public class hw4
 				case 1:
 					try
 					{	
-						Scanner read = new Scanner(new FileInputStream("Mission/1.txt"));
+						Scanner read = new Scanner(new FileInputStream("C:\\Users\\user\\eclipse-workspace\\hw4\\src\\Mission\\1.txt"));
 						missionCode = read.nextLine();
 						people = Integer.parseInt(read.nextLine());
 						for(int a=0;a<10;a++)
@@ -119,7 +119,7 @@ public class hw4
 				case 2:
 					try
 					{	
-					    Scanner read = new Scanner(new FileInputStream("Mission/2.txt"));
+					    Scanner read = new Scanner(new FileInputStream("C:\\Users\\user\\eclipse-workspace\\hw4\\src\\Mission\\2.txt"));
 						missionCode = read.nextLine();
 						people = Integer.parseInt(read.nextLine());
 						for(int a=0;a<10;a++)
@@ -141,7 +141,7 @@ public class hw4
 				case 3:
 					try
 					{	
-					    Scanner read = new Scanner(new FileInputStream("Mission/3.txt"));
+					    Scanner read = new Scanner(new FileInputStream("C:\\Users\\user\\eclipse-workspace\\hw4\\src\\Mission\\3.txt"));
 						missionCode = read.nextLine();
 						people = Integer.parseInt(read.nextLine());
 						for(int a=0;a<10;a++)
@@ -163,7 +163,7 @@ public class hw4
 				case 4:
 					try
 					{	
-					    Scanner read = new Scanner(new FileInputStream("Mission/4.txt"));
+					    Scanner read = new Scanner(new FileInputStream("C:\\Users\\user\\eclipse-workspace\\hw4\\src\\Mission\\4.txt"));
 						missionCode = read.nextLine();
 						people = Integer.parseInt(read.nextLine());
 						for(int a=0;a<10;a++)
@@ -185,7 +185,7 @@ public class hw4
 				case 5:
 					try
 					{	
-					    Scanner read = new Scanner(new FileInputStream("Mission/5.txt"));
+					    Scanner read = new Scanner(new FileInputStream("C:\\Users\\user\\eclipse-workspace\\hw4\\src\\Mission\\5.txt"));
 						missionCode = read.nextLine();
 						people = Integer.parseInt(read.nextLine());
 						for(int a=0;a<10;a++)
@@ -225,7 +225,7 @@ public class hw4
 				switch(people)//在戰鬥陣列中放入玩家陣營
 				{
 					case 3:
-						if(!_commandCut[2].equals(_commandCut[3])&&!_commandCut[3].equals(_commandCut[4]))
+						if(!_commandCut[2].equals(_commandCut[3])  &&  !_commandCut[3].equals(_commandCut[4]))
 						{
 							battlefield.putPlayer(_commandCut[2],_commandCut[3],_commandCut[4],"none","none",knight,assassin,master,archer,priest);
 						}
@@ -236,7 +236,7 @@ public class hw4
 						}
 						break;
 					case 4:
-						if(!_commandCut[2].equals(_commandCut[3])&&!_commandCut[3].equals(_commandCut[4])&&!_commandCut[4].equals(_commandCut[5]))
+						if(!_commandCut[2].equals(_commandCut[3]) && !_commandCut[3].equals(_commandCut[4]) && !_commandCut[4].equals(_commandCut[5]))
 						{
 							battlefield.putPlayer(_commandCut[2],_commandCut[3],_commandCut[4],_commandCut[5],"none",knight,assassin,master,archer,priest);
 						}
@@ -247,7 +247,7 @@ public class hw4
 						}
 						break;
 					case 5:
-						if(!_commandCut[2].equals(_commandCut[3])&&!_commandCut[3].equals(_commandCut[4])&&!_commandCut[4].equals(_commandCut[5])&&!_commandCut[5].equals(_commandCut[6]))
+						if(!_commandCut[2].equals(_commandCut[3]) && !_commandCut[3].equals(_commandCut[4]) && !_commandCut[4].equals(_commandCut[5]) && !_commandCut[5].equals(_commandCut[6]))
 						{
 							battlefield.putPlayer(_commandCut[2],_commandCut[3],_commandCut[4],_commandCut[5],_commandCut[6],knight,assassin,master,archer,priest);
 						}
@@ -294,7 +294,7 @@ public class hw4
 						assassin.cd = 1;
 						master.cd = 1;
 						archer.cd = 1;
-						priest.cd = 1;
+						priest.cd = 1; //先將全部cd設為1，進入war狀態後會先-1
 						break;
 					case"B":
 						System.out.println("修怕囉");

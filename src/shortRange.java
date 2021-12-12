@@ -217,7 +217,7 @@ public class shortRange extends character
 		rage = 0;
 	}//方法結束
 	
-	public int normalbarbarian(fight battlefield,boolean qi,int anger,shortRange knight,shortRange assassin,longRange master,longRange archer,support priest)
+	public int normalbarbarian(fight battlefield,boolean qi,int anger,Knight knight,shortRange assassin,longRange master,longRange archer,support priest)
 	{
 		System.out.println("野蠻人使用嘲諷");
 		for(int a=0;a<5;a++)

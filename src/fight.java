@@ -3,8 +3,8 @@ import java.io.*;
 
 public class fight
 {
-	String[] field = new String[10];
-	int[][] fieldInt = new int[10][5];
+	String[] field = new String[10]; //決鬥場
+	int[][] fieldInt = new int[10][5]; //每個角色狀態
 	public void cleanfield()
 	{
 		for(int a=0;a<5;a++)
@@ -20,7 +20,7 @@ public class fight
 		}
 	}
 	//********************************************************************************************************************
-	public void putPlayer(String first,String second,String third,String fourth,String fifth,shortRange knight,shortRange assassin,longRange master,longRange archer,support priest)
+	public void putPlayer(String first,String second,String third,String fourth,String fifth,Knight knight,shortRange assassin,longRange master,longRange archer,support priest)
 	{
 		switch (first)
 		{
@@ -384,7 +384,7 @@ public class fight
 			
 		}
 	}
-		public void war(fight battlefield,shortRange knight,shortRange assassin,longRange master,longRange archer,support priest,shortRange barbarian,longRange wizard,support witch,boolean soloman)
+		public void war(fight battlefield,Knight knight,shortRange assassin,longRange master,longRange archer,support priest,shortRange barbarian,longRange wizard,support witch,boolean soloman)
 		{
 			boolean onWar = true;
 			
@@ -531,7 +531,8 @@ public class fight
 										case "normal":
 											if(fieldInt[a][1]>=5)
 											{
-												knight.normalknight(battlefield,chi);
+												knight.setNormalAttack(new KnightNormalAttack());
+												knight.normalAtt.normalAttack(battlefield, chi, knight.rage, knight.mp);
 											}
 											else
 											{
@@ -547,7 +548,7 @@ public class fight
 										case "special":
 											if(fieldInt[a][1]>=25&&fieldInt[a][4]==10)
 											{
-												knight.normalknight(battlefield,chi);
+												knight.normalAtt.normalAttack(battlefield, chi, knight.rage, knight.mp);
 											}
 											else
 											{
